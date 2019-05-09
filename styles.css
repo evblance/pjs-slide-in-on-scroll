@@ -1,3 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+:root {
+  --shadow--paper: 1px 2px 7px 3px rgba(0, 0, 0, 0.15);
+  --background--paper: hsl(64, 35%, 92%);
+  --padding--paper: 1rem;
+  --max-width--section: 1200px;
+  --max-width--blog-article-img: 300px;
+  --background--body: hsl(20, 52%, 46%);
+}
+
 body {
-  background: #333;
+  background: var(--background--body);
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.blog__heading {
+  color: #ddd;
+  font: normal small-caps bold 2.5rem "PT Sans Narrow";
+  text-align: center;
+}
+
+.blog-article {
+  margin-bottom: 50px;
+}
+
+.blog-article__heading {
+  font: normal small-caps bold 2.1rem "PT Sans Narrow";
+}
+
+.blog-article__text {
+  display: flow-root;
+  font: normal normal normal 1.2rem "PT Sans Narrow";
+  text-align: justify;
+}
+
+.blog-article__text::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.blog-article__img {
+  padding: 2px;
+  border: 1px solid var(--background--body);
+  float: left;
+  height: auto;
+  margin: 1rem;
+  max-width: var(--max-width--blog-article-img);
+}
+
+.blog-article__img--right {
+  float: right;
+}
+
+.paper {
+  background: var(--background--paper);
+  border-radius: 2px;
+  box-shadow: var(--shadow--paper);
+  padding: var(--padding--paper);
+}
+
+.section {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: var(--max-width--section);
+}
+
+.site-header {
+  color: #ddd;
+  font: italic normal bold 3rem "PT Sans Narrow";
+  text-align: left;
+  text-transform: uppercase;
 }
