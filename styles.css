@@ -41,16 +41,24 @@ body {
 }
 
 .blog-article__img {
-  padding: 2px;
   border: 1px solid var(--background--body);
   float: left;
   height: auto;
+  left: -100vw;
   margin: 1rem;
   max-width: var(--max-width--blog-article-img);
+  padding: 2px;
+  position: relative;
+  transition: left 0.5s ease-out;
+}
+
+.blog-article__img.slide-in {
+  left: 0;
 }
 
 .blog-article__img--right {
   float: right;
+  left: 100vw;
 }
 
 .paper {
