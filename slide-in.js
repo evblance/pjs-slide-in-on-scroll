@@ -10,7 +10,7 @@ function handleScroll() {
 
   // Slide in or out images depending on their vertical document offset in relation to the user scroll position
   for (let image of images) {
-    if (image.offsetTop + image.clientHeight < window.scrollY || image.offsetTop + image.clientHeight > window.scrollY + windowHeight) {
+    if (image.offsetTop < window.scrollY || image.offsetTop + image.clientHeight > window.scrollY + windowHeight) {
       slideOutImage(image);
     } else if (image.offsetTop <= window.scrollY + windowHeight) {
       slideInImage(image);
